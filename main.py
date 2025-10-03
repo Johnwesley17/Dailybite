@@ -3,12 +3,13 @@ import time
 from news_sender import send_email
 
 # Schedule: Every day at 08:00 AM
-schedule.every().day.at("12:59").do(send_email)
+schedule.every().day.at("1:06").do(send_email)
 
 print("📆 DailyByte Email Scheduler Started...")
 
 while True:
     schedule.run_pending()
     time.sleep(60)
+
 
 
